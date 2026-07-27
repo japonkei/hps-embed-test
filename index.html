@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Harmony Public Schools — Staff Assistant</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(160deg, #f0f4ff 0%, #f7f7fb 60%, #eef7f2 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      padding: 20px 32px;
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #e6e6ef;
+    }
+    header h1 { font-size: 1.05rem; margin: 0; color: #1f2937; }
+    header p { font-size: 0.8rem; margin: 4px 0 0; color: #6b7280; }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 920px;
+      padding: 40px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .copy { max-width: 380px; }
+    .copy h2 { font-size: 1.4rem; color: #111827; margin: 0 0 12px; }
+    .copy p { font-size: 0.9rem; line-height: 1.6; color: #4b5563; }
+    .chat-frame {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      background: #fff;
+    }
+    footer { padding: 16px; font-size: 0.72rem; color: #9ca3af; }
+    @media (max-width: 860px) { .chat-frame { width: 100%; min-width: 320px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Harmony Public Schools</h1>
+    <p>Staff Knowledge Base — embed integration test page</p>
+  </header>
+
+  <main>
+    <div class="copy">
+      <h2>Ask the Staff Assistant</h2>
+      <p>
+        Sign in with your Harmony account to ask questions about staff policies,
+        handbooks, and procedures. Answers come only from the official knowledge
+        base documents.
+      </p>
+      <p>
+        This page simulates an external site (e.g. Salesforce or an intranet
+        portal) embedding the OpIntelly chat via iframe.
+      </p>
+    </div>
+
+    <!-- OpIntelly Embed Chat (SSO) -->
+    <iframe
+      src="https://app.hps.opintelly.ai/embed/chat?tenant=hps&connection=staffkb"
+      width="420" height="640"
+      allow="clipboard-write"
+      class="chat-frame">
+    </iframe>
+  </main>
+
+  <footer>OpIntelly embed test — not an official HPS page</footer>
+</body>
+</html>
